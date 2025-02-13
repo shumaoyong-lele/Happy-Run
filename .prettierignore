@@ -1,0 +1,15 @@
+node_modules/
+.husky/
+.vscode/
+**/.log/
+**/dist/
+dao3.config.json
+GameAPI.d.ts
+ClientAPI.d.ts
+tsconfig.json
+package.json
+package-lock.json
+.prettierrc
+.prettierignore
+.lintstagedrc
+.gitignore
