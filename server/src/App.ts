@@ -77,9 +77,15 @@ const end = world.addZone({
   ),
 });
 
-end.onEnter(({ entity }) => {
+end.onEnter(async ({ entity }) => {
   if (entity.player) {
+    await entity.player.dialog<GameTextDialogParams>({
+      type: GameDialogType.TEXT,
+      title: '获胜',
+      content: `${entity.player.name}，恭喜你通关游戏!`,
+    });
     world.say(`${entity.player.name}到达了终点，用了 ${time} 秒`);
+    entity.player.canFly = true;
   }
   dev_function(entity);
 });
