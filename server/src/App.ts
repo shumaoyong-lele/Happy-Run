@@ -1,3 +1,7 @@
+export function log(text: string) {
+  console.log(text);
+}
+
 world.onPlayerJoin(async ({ entity }) => {
   entity.player.directMessage(`你好，${entity.player.name}，欢迎来到本地图`);
 });
